@@ -3,195 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Publications — Dr. Abdo Ballouk | Peer-Reviewed Research</title>
-<meta name="description" content="Peer-reviewed publications by Dr. Abdo Ballouk: GNSS security, SDR, UAV detection and communications, speech emotion recognition.">
+<title>Publications — Dr. Abdo Ballouk</title>
+<meta name="description" content="Peer-reviewed publications by Dr. Abdo Ballouk: GNSS security, UAV detection and communications, RF amplifier design.">
 <meta name="author" content="Abdo Ballouk">
 <meta property="og:title" content="Publications — Dr. Abdo Ballouk">
-<meta property="og:description" content="Seven peer-reviewed publications in GNSS security, SDR, UAV detection and communications.">
+<meta property="og:description" content="Seven peer-reviewed publications in GNSS security, UAV communications and RF amplifier design.">
 <meta property="og:image" content="https://abdoballouk.github.io/spectrox/assets/main-picture-spectrum.png">
 <meta property="og:url" content="https://abdoballouk.github.io/publications.html">
-<meta name="theme-color" content="#0a0c15">
+<meta name="theme-color" content="#0C1222">
 <link rel="icon" href="assets/favicon.ico">
 <link rel="canonical" href="https://abdoballouk.github.io/publications.html">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "about": { "@id": "https://abdoballouk.github.io/#AbdoBallouk" },
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Dr. Abdo Ballouk",
-    "sameAs": ["https://orcid.org/0000-0001-9276-4398","https://www.linkedin.com/in/abdo-ballouk"]
-  }
-}
+{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Dr. Abdo Ballouk","sameAs":["https://orcid.org/0000-0001-9276-4398","https://www.linkedin.com/in/abdo-ballouk"]}}
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 body{ -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; -webkit-touch-callout:none; }
 input,textarea,[contenteditable="true"]{ -webkit-user-select:text; user-select:text; }
 img,a,button{ -webkit-user-drag:none; user-drag:none; }
-body{ background:#0a0c15; color:#eef2ff; font-family:'Inter',sans-serif; }
-.ltr-text{ direction:ltr; display:inline-block; unicode-bidi:isolate; font-family:'JetBrains Mono',monospace; font-weight:500; }
-.glow-card,.pub-card{ transition:all .3s ease; border:1px solid #1e2a3a; background:linear-gradient(135deg,#0f1420 0%,#0a0c15 100%); border-radius:1rem; }
-.glow-card:hover,.pub-card:hover{ border-color:#10b981; box-shadow:0 0 25px rgba(16,185,129,.15); transform:translateY(-3px); }
-.gradient-text{ background:linear-gradient(135deg,#10b981,#3b82f6,#f59e0b); -webkit-background-clip:text; background-clip:text; color:transparent; }
-::-webkit-scrollbar{ width:6px; } ::-webkit-scrollbar-track{ background:#0f111a; } ::-webkit-scrollbar-thumb{ background:#2d3a4e; border-radius:10px; }
-@media print{ body{ background:white; color:black; } .no-print{ display:none !important; } .pub-card{ background:white !important; border:1px solid #ccc !important; color:black !important; } }
+:root{ --bg:#F6F7F9; --surface:#FFFFFF; --ink:#0C1222; --muted:#5A6574; --line:#E6EAF1; --accent:#2E5BFF; --accent-soft:#E9EFFF; --warm:#F2A53B; --dark:#0C1222; }
+body{ background:var(--bg); color:var(--ink); font-family:'Inter',system-ui,'Segoe UI',sans-serif; }
+.display{ font-family:'Space Grotesk',system-ui,sans-serif; letter-spacing:-0.02em; }
+.mono{ font-family:'JetBrains Mono',monospace; }
+.ltr{ direction:ltr; display:inline-block; unicode-bidi:isolate; }
+.eyebrow{ font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--accent); font-weight:600; }
+.eyebrow::before{ content:"—\2002"; }
+.card{ background:var(--surface); border:1px solid var(--line); border-radius:18px; transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.card:hover{ transform:translateY(-3px); box-shadow:0 20px 40px -18px rgba(12,18,34,.15); border-color:var(--accent); }
+.rise{ opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+.rise.in{ opacity:1; transform:none; }
+.btn{ display:inline-flex; align-items:center; gap:.5rem; font-weight:600; font-size:.875rem; border-radius:999px; padding:.65rem 1.3rem; transition:all .25s ease; }
+.btn-solid{ background:var(--accent); color:#fff; box-shadow:0 12px 24px -10px rgba(46,91,255,.5); }
+.btn-solid:hover{ background:#1E45D6; transform:translateY(-2px); }
+.btn-ghost{ border:1px solid var(--line); color:var(--ink); background:var(--surface); }
+.btn-ghost:hover{ border-color:var(--accent); color:var(--accent); transform:translateY(-2px); }
+@media print{ body{ background:#fff!important; color:#000!important; } .no-print{ display:none!important; } .dark{ background:#fff!important; color:#000!important; } .card{ box-shadow:none!important; } }
+::-webkit-scrollbar{ width:8px; } ::-webkit-scrollbar-track{ background:var(--bg); } ::-webkit-scrollbar-thumb{ background:#C7CFDC; border-radius:8px; }
 </style>
 </head>
-<body>
+<body class="antialiased">
 
-<div class="h-1 w-full bg-gradient-to-r from-primary via-accent to-amber no-print"></div>
-
-<nav class="sticky top-0 z-50 bg-dark/90 backdrop-blur-xl border-b border-border py-2 px-5 no-print flex flex-wrap justify-between items-center">
-    <div class="flex items-center gap-3">
-        <img src="assets/favicon.ico" class="w-9 h-9 rounded-xl object-cover shadow-lg" alt="AB">
-        <div><div class="text-[10px] font-mono text-primary tracking-wider">AB / RESEARCH OUTPUT</div><div class="text-sm font-black" id="navName">Dr. Abdo Ballouk</div></div>
+<header class="no-print sticky top-0 z-50 bg-white/85 backdrop-blur-xl border-b border-[var(--line)]">
+  <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-[var(--ink)] text-white display font-bold flex items-center justify-center relative">
+        <span id="logoAB">AB</span><span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-[var(--accent)] border-2 border-white"></span>
+      </div>
+      <div class="leading-tight">
+        <div class="display font-bold text-[15px]" id="navName">Dr. Abdo Ballouk — Publications</div>
+        <div class="mono text-[10px] uppercase tracking-[0.2em] text-[var(--muted)]">Research Output</div>
+      </div>
+    </a>
+    <div class="flex items-center gap-2">
+      <button id="exportBtn" class="btn btn-ghost !py-2 !px-3 !text-xs"><i class="fa-solid fa-file-code text-[var(--warm)]"></i><span class="hidden sm:inline" id="exportText">BibTeX</span></button>
+      <button onclick="window.print();" class="btn btn-ghost !py-2 !px-3 !text-xs"><i class="fa-solid fa-print"></i><span class="hidden sm:inline" id="printBtn">Print</span></button>
+      <button id="langBtn" class="btn btn-ghost !py-2 !px-3 !text-xs"><i class="fa-solid fa-globe text-[var(--accent)]"></i><span id="langLabel">العربية</span></button>
+      <a href="index.html" class="btn btn-solid !py-2 !px-4 hidden sm:inline-flex"><i class="fa-solid fa-house"></i><span id="homeBtn">Home</span></a>
     </div>
-    <div class="flex gap-2 flex-wrap items-center">
-        <a href="index.html" class="text-xs text-slate-400 hover:text-primary font-semibold transition px-2"><span id="navHome">Home</span></a>
-        <button id="exportBtn" class="text-xs font-bold text-amber border border-amber/50 rounded-lg px-3 py-1 hover:bg-amber/20 transition"><i class="fa-solid fa-file-code"></i> <span id="exportText">Export BibTeX</span></button>
-        <button onclick="window.print();" class="text-xs font-bold text-slate-200 border border-border rounded-lg px-3 py-1 hover:border-primary transition"><i class="fa-solid fa-print"></i> <span id="printBtnText">Print (A4)</span></button>
-        <button id="langToggleBtn" class="text-xs font-bold text-slate-200 border border-border rounded-lg px-3 py-1 hover:border-primary transition"><i class="fa-solid fa-language text-primary"></i> <span id="langBtnLabel">العربية</span></button>
-    </div>
-</nav>
+  </div>
+</header>
 
 <!-- HEADER -->
-<section class="py-16 px-6 border-b border-border text-center">
-    <div class="max-w-3xl mx-auto space-y-4">
-        <div class="inline-flex gap-2 bg-primary/10 border border-primary/30 rounded-full px-3 py-1 text-primary text-xs font-mono"><i class="fa-regular fa-circle-check"></i> <span id="pubBadge">7 Peer-Reviewed Publications</span></div>
-        <h1 class="text-4xl font-black"><span id="pubTitle">Publications</span> — <span class="gradient-text" id="pubTitle2">Dr. Abdo Ballouk</span></h1>
-        <p class="text-slate-400 text-sm" id="pubSub">Research in Global Navigation Satellite System (GNSS) security, RF-based drone detection, Software-Defined Radio, and speech emotion recognition.</p>
-        <div class="flex justify-center gap-2 flex-wrap text-xs no-print">
-            <a href="https://orcid.org/0000-0001-9276-4398" target="_blank" class="flex items-center gap-2 bg-card border border-border hover:border-primary rounded-full px-3 py-1.5"><i class="fa-brands fa-orcid text-emerald-500"></i> <span class="ltr-text">ORCID 0000-0001-9276-4398</span></a>
-            <span id="gsChipSlot"></span>
-            <span id="rgChipSlot"></span>
-        </div>
+<section class="dark bg-[var(--dark)] text-white">
+  <div class="max-w-7xl mx-auto px-5 py-16 lg:py-20">
+    <div class="eyebrow !text-[var(--warm)]" id="pubBadge">Peer-Reviewed Publications</div>
+    <h1 class="display font-bold text-4xl sm:text-5xl mt-4 leading-tight">Seven papers.<br><span class="text-white/50">Signal reliability, engineered.</span></h1>
+    <p class="text-white/60 mt-5 max-w-2xl" id="pubSub">Research on GNSS security, hybrid jamming &amp; spoofing countermeasures for UAV systems, UAV air-navigation channel behaviour, and precision RF amplifier design. Titles are available on request from the publishing venues; DOIs and year-of-publication metadata are maintained as they become available.</p>
+    <div class="flex flex-wrap gap-2.5 mt-6">
+      <a href="https://orcid.org/0000-0001-9276-4398" target="_blank" class="card !rounded-full px-4 py-2 flex items-center gap-2" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.15)"><i class="fa-brands fa-orcid text-emerald-400"></i><span class="ltr mono text-xs">ORCID 0000-0001-9276-4398</span></a>
+      <span id="gsSlot"></span>
+      <span id="rgSlot"></span>
     </div>
+  </div>
 </section>
 
 <!-- LIST -->
-<section class="py-12 px-6 max-w-4xl mx-auto">
-    <div id="pubsList" class="space-y-5"></div>
+<section class="max-w-5xl mx-auto px-5 py-16">
+  <div class="mb-8">
+    <div class="eyebrow" id="listEyebrow">Bibliography</div>
+    <h2 class="display font-bold text-3xl mt-3" id="listTitle">Publication list</h2>
+  </div>
+  <div id="pubsList" class="space-y-4"></div>
 </section>
 
-<footer class="border-t border-border bg-dark/50 py-8 px-6 text-center">
-    <p class="text-sm font-bold" id="footerName">Dr. Abdo Ballouk</p>
-    <p class="text-xs text-slate-500 mt-1" id="footerNote">All bibliography entries are authored/co-authored original work. DOIs and venue links are maintained as they become available.</p>
-    <div class="flex justify-center gap-4 pt-3 text-xs">
-        <a href="index.html" class="text-slate-400 hover:text-primary"><i class="fa-solid fa-house"></i> <span id="footerHome">Home</span></a>
+<footer class="border-t border-[var(--line)] bg-white/60">
+  <div class="max-w-7xl mx-auto px-5 py-8 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-[var(--ink)] display font-bold flex items-center justify-center text-white text-sm">AB</div>
+      <div class="text-[13px]"><span class="font-semibold" id="ftName">Dr. Abdo Ballouk</span> <span class="text-[var(--muted)]" id="ftNote">· All peer-reviewed academic work. © 2026.</span></div>
     </div>
+    <a href="index.html" class="text-sm font-semibold text-[var(--accent)] hover:underline" id="backHome">← Back to homepage</a>
+  </div>
 </footer>
 
 <script>
 /* ============ منع النسخ ============ */
-document.addEventListener('contextmenu', function(e){ e.preventDefault(); return false; });
-document.addEventListener('copy', function(e){ e.preventDefault(); return false; });
-document.addEventListener('cut', function(e){ e.preventDefault(); return false; });
-document.addEventListener('paste', function(e){ e.preventDefault(); return false; });
-document.addEventListener('selectstart', function(e){ e.preventDefault(); return false; });
-document.addEventListener('dragstart', function(e){ e.preventDefault(); return false; });
-document.addEventListener('keydown', function(e){
-    if(e.ctrlKey && /^[cCxXvVaAuU]$/.test(e.key)){ e.preventDefault(); return false; }
-    if(e.key === 'F12'){ e.preventDefault(); return false; }
-    if(e.ctrlKey && e.shiftKey && /^[iIjJ]$/.test(e.key)){ e.preventDefault(); return false; }
+document.addEventListener('contextmenu',function(e){e.preventDefault();return false;});
+document.addEventListener('copy',function(e){e.preventDefault();return false;});
+document.addEventListener('cut',function(e){e.preventDefault();return false;});
+document.addEventListener('paste',function(e){e.preventDefault();return false;});
+document.addEventListener('selectstart',function(e){e.preventDefault();return false;});
+document.addEventListener('dragstart',function(e){e.preventDefault();return false;});
+document.addEventListener('keydown',function(e){
+  if(e.ctrlKey && /^[cCxXvVaAuU]$/.test(e.key)){e.preventDefault();return false;}
+  if(e.key==='F12'){e.preventDefault();return false;}
+  if(e.ctrlKey&&e.shiftKey&&/^[iIjJ]$/.test(e.key)){e.preventDefault();return false;}
 });
-document.addEventListener('auxclick', function(e){ if(e.button === 1){ e.preventDefault(); return false; } });
-/* ============ نهاية منع النسخ ============ */
+document.addEventListener('auxclick',function(e){if(e.button===1){e.preventDefault();return false;}});
 
-/* املأ روابط ملفك عند توفرها، وستظهر الأزرار تلقائياً */
-var GS_URL = '';   /* مثال: https://scholar.google.com/citations?user=XXXX */
-var RG_URL = '';   /* مثال: https://www.researchgate.net/profile/XXXX */
+/* املأ روابط ملفك عند توفرها وستظهر الأزرار تلقائياً */
+var GS_URL='';  /* مثال: https://scholar.google.com/citations?user=XXXX */
+var RG_URL='';  /* مثال: https://www.researchgate.net/profile/XXXX */
 
-var PUBS = {
-    en: [
-        { n:"1.", y:"2025", v:"Ph.D. Dissertation — Damascus University", t:"A Protocol for Signal Intervention in the Control of a UAV", doi:"", tags:["GNSS Security","UAV","SDR"] },
-        { n:"2.", y:"2024", v:"International Conference on Aerospace Research, Yogyakarta, Indonesia", t:"Study and Analysis of Methods Used to Detect and Deter Drones in the Range of Radio Waves", doi:"", tags:["RF","Drone Detection"] },
-        { n:"3.", y:"2023", v:"Journal of Advanced Research in Applied Sciences and Engineering Technology (ARASET)", t:"RF-Based UAV Detection Systems", doi:"", tags:["RF","UAV","SDR"] },
-        { n:"4.", y:"2023", v:"ARASET", t:"An Approach to Detect Drones Resistance to Jamming Methods", doi:"", tags:["Anti-Jamming","UAV","GNSS"] },
-        { n:"5.", y:"2022", v:"Tishreen University Journal for Research and Scientific Studies", t:"Optimized Method for Real-Time Detection of Drones", doi:"", tags:["Machine Learning","UAV Detection"] },
-        { n:"6.", y:"2022", v:"International Journal of Interactive Mobile Technologies", t:"Hybrid Cross Neural Network for Speech Emotion Recognition", doi:"", tags:["Deep Learning","Speech"] },
-        { n:"7.", y:"2021", v:"Alexandria Engineering Journal, Elsevier", t:"Hybrid Adaptive Jamming and Spoofing Suppression Method for Global Navigation Satellite Systems", doi:"10.1016/j.aej.2021.03.015", tags:["GNSS","Anti-Jamming","Adaptive Filtering"] }
-    ],
-    ar: [
-        { n:"1.", y:"2025", v:"أطروحة دكتوراه — جامعة دمشق", t:"بروتوكول تدخل في الإشارات للتحكم في طائرة مسيّرة", doi:"", tags:["أمن GNSS","طائرات مسيّرة","SDR"] },
-        { n:"2.", y:"2024", v:"مؤتمر دولي لأبحاث الفضاء، يوجياكرتا، إندونيسيا", t:"دراسة وتحليل طرق كشف وردع الطائرات المسيّرة في نطاق الموجات الراديوية", doi:"", tags:["RF","كشف الطائرات"] },
-        { n:"3.", y:"2023", v:"مجلة ARASET", t:"أنظمة كشف الطائرات المسيّرة المعتمدة على الترددات الراديوية", doi:"", tags:["RF","طائرات مسيّرة","SDR"] },
-        { n:"4.", y:"2023", v:"مجلة ARASET", t:"نهج لكشف مقاومة الطائرات المسيّرة لأساليب التشويش", doi:"", tags:["مضاد تشويش","طائرات","GNSS"] },
-        { n:"5.", y:"2022", v:"مجلة جامعة تشرين للعلوم", t:"طريقة محسَّنة للكشف اللحظي عن الطائرات المسيّرة", doi:"", tags:["تعلم آلي","كشف الطائرات"] },
-        { n:"6.", y:"2022", v:"IJIM", t:"شبكة عصبية متصالبة هجينة للتعرف على المشاعر عبر الكلام", doi:"", tags:["تعلم عميق","كلام"] },
-        { n:"7.", y:"2021", v:"مجلة الإسكندرية الهندسية، Elsevier", t:"طريقة هجينة متكيّفة لقمع التشويش والخداع لأنظمة الملاحة العالمية", doi:"10.1016/j.aej.2021.03.015", tags:["GNSS","مضاد تشويش"] }
-    ],
-    bib_authors: "Abdo Ballouk"
-};
+var ITEMS = [
+ ["1","GNSS Security — UAVs","Novel Advanced Hybrid Jamming Techniques for GPS/GLONASS Receivers on UAVs Using a Locally Designed SDR Platform"],
+ ["2","GNSS Security — UAVs","An Efficient Hybrid Spoofing / Spot-Jamming Strategy on Unmanned Aerial Vehicles"],
+ ["3","GNSS Security — UAVs","Development and Evaluation of Novel Hybrid Jamming Techniques on American and Russian GNSS Systems Onboard UAVs Using a Locally-Developed SDR Platform"],
+ ["4","UAV Communications","Estimating the Effectiveness of Tone Jamming Technique on the Control and Air Navigation Channels of UAVs"],
+ ["5","UAV Communications","Estimating the Effectiveness of Protocol-Aware Jamming Technique with a Navigation Message on Navigation Systems Onboard UAVs"],
+ ["6","RF Amplifier Design","Design of Narrow-Band Frequency Amplifier (1.5–1.6 GHz) Based on InGaP/GaAs HBT Technology"],
+ ["7","RF Amplifier Design","Design of Wideband RF Driver Amplifier (100–1800 MHz) Based on InGaP/GaAs HBT MMIC Technology"]
+];
 
 var translations = {
-    en: {
-        navName:"Dr. Abdo Ballouk — Publications", navHome:"Home", exportText:"Export BibTeX", printBtnText:"Print (A4)",
-        pubBadge:"7 Peer-Reviewed Publications",
-        pubTitle:"Publications", pubTitle2:"Dr. Abdo Ballouk",
-        pubSub:"Research in Global Navigation Satellite System (GNSS) security, RF-based drone detection, Software-Defined Radio, and speech emotion recognition.",
-        footerName:"Dr. Abdo Ballouk", footerNote:"All bibliography entries are authored/co-authored original work. DOIs and venue links are maintained as they become available.", footerHome:"Home",
-        gs:"Google Scholar", rg:"ResearchGate", doiPending:"DOI", view:"View"
-    },
-    ar: {
-        navName:"د. عبدو بلوك — المنشورات", navHome:"الرئيسية", exportText:"تصدير BibTeX", printBtnText:"طباعة (A4)",
-        pubBadge:"7 منشورات محكّمة",
-        pubTitle:"المنشورات", pubTitle2:"د. عبدو بلوك",
-        pubSub:"بحث في أمن أنظمة الملاحة العالمية (GNSS)، كشف الطائرات المسيّرة عبر الترددات الراديوية، والراديو المعرّف بالبرمجيات، والتعرف على المشاعر عبر الكلام.",
-        footerName:"د. عبدو بلوك", footerNote:"جميع الإدخالات أعمال أصلية بتأليف/بمشاركة الباحث. تُحدَّث روابط DOI والجهات عند توفرها.", footerHome:"الرئيسية",
-        gs:"Google Scholar", rg:"ResearchGate", doiPending:"DOI", view:"عرض"
-    }
+ en:{
+  navName:"Dr. Abdo Ballouk — Publications", exportText:"BibTeX", printBtn:"Print", homeBtn:"Home",
+  pubBadge:"Peer-Reviewed Publications",
+  pubSub:"Research on GNSS security, hybrid jamming & spoofing countermeasures for UAV systems, UAV air-navigation channel behaviour, and precision RF amplifier design. Titles are available on request from the publishing venues; DOIs and year-of-publication metadata are maintained as they become available.",
+  listEyebrow:"Bibliography", listTitle:"Publication list",
+  gs:"Google Scholar", rg:"ResearchGate", pending:"DOI & venue — pending update",
+  ftName:"Dr. Abdo Ballouk", ftNote:"All peer-reviewed academic work. © 2026.", backHome:"← Back to homepage"
+ },
+ ar:{
+  navName:"د. عبده بللوق — المنشورات", exportText:"BibTeX", printBtn:"طباعة", homeBtn:"الرئيسية",
+  pubBadge:"أبحاث محكّمة",
+  pubSub:"أبحاث في أمن أنظمة الملاحة، وآليات الهجين لمكافحة التشويش والخداع لأنظمة الطائرات من دون طيار، وسلوك قنوات الملاحة الجوية للطائرات من دون طيار، وتصميم مضخمات راديوية دقيقة. عناوين الأبحاث متاحة عند الطلب من الجهات الناشرة؛ وتُحدَّث أرقام DOI وسنة النشر عند توفرها.",
+  listEyebrow:"الببليوغرافيا", listTitle:"قائمة المنشورات",
+  gs:"Google Scholar", rg:"ResearchGate", pending:"DOI وجهة النشر — قيد التحديث",
+  ftName:"د. عبده بللوق", ftNote:"جميع الأعمال الأكاديمية محكّمة. © 2026.", backHome:"→ العودة إلى الصفحة الرئيسية"
+ }
 };
 
 function buildPage(lang){
-    var isRtl = lang === 'ar';
-    document.documentElement.dir = isRtl ? 'rtl' : 'ltr';
-    document.documentElement.lang = lang;
-    var t = translations[lang];
-    Object.keys(t).forEach(function(id){ var el = document.getElementById(id); if(el) el.innerText = t[id]; });
-    document.getElementById('langBtnLabel').innerText = lang === 'ar' ? 'English' : 'العربية';
+  var isRtl=lang==='ar';
+  document.documentElement.dir=isRtl?'rtl':'ltr';
+  document.documentElement.lang=lang;
+  var t=translations[lang];
+  Object.keys(t).forEach(function(id){ var el=document.getElementById(id); if(el) el.innerText=t[id]; });
+  document.getElementById('langLabel').innerText=lang==='ar'?'English':'العربية';
 
-    var slots = { gs: document.getElementById('gsChipSlot'), rg: document.getElementById('rgChipSlot') };
-    slots.gs.innerHTML = GS_URL ? '<a href="'+GS_URL+'" target="_blank" class="flex items-center gap-2 bg-card border border-border hover:border-primary rounded-full px-3 py-1.5"><i class="fa-solid fa-graduation-cap text-primary"></i> '+t.gs+'</a>' : '';
-    slots.rg.innerHTML = RG_URL ? '<a href="'+RG_URL+'" target="_blank" class="flex items-center gap-2 bg-card border border-border hover:border-primary rounded-full px-3 py-1.5"><i class="fa-brands fa-researchgate text-teal-400"></i> '+t.rg+'</a>' : '';
+  var gs=document.getElementById('gsSlot');
+  gs.innerHTML=GS_URL?'<a href="'+GS_URL+'" target="_blank" class="card !rounded-full px-4 py-2 flex items-center gap-2" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.15)"><i class="fa-solid fa-graduation-cap text-[var(--accent)]"></i><span class="text-xs font-semibold">'+t.gs+'</span></a>':'';
+  var rg=document.getElementById('rgSlot');
+  rg.innerHTML=RG_URL?'<a href="'+RG_URL+'" target="_blank" class="card !rounded-full px-4 py-2 flex items-center gap-2" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.15)"><i class="fa-brands fa-researchgate text-teal-400"></i><span class="text-xs font-semibold">'+t.rg+'</span></a>':'';
 
-    var list = document.getElementById('pubsList'); list.innerHTML = '';
-    PUBS[lang].forEach(function(p){
-        var doi = p.doi ? '<a href="https://doi.org/'+p.doi+'" target="_blank" class="ltr-text text-xs border border-border bg-slate-900 px-2.5 py-1 rounded-lg text-emerald-400 hover:border-primary"><i class="fa-solid fa-link"></i> '+t.view+' — <span class="ltr-text">'+p.doi+'</span></a>'
-                        : '<span class="ltr-text text-xs border border-border bg-slate-900 px-2.5 py-1 rounded-lg text-slate-500 cursor-not-allowed"><i class="fa-solid fa-hourglass-half"></i> '+t.doiPending+'</span>';
-        var tags = p.tags.map(function(x){ return '<span class="ltr-text text-[10px] bg-primary/10 border border-primary/25 text-primary px-2 py-0.5 rounded-full">#'+x+'</span>'; }).join(' ');
-        list.innerHTML += '<div class="pub-card p-6"><div class="flex flex-wrap items-center gap-2 text-xs font-mono">' +
-            '<span class="text-amber font-bold">'+p.n+'</span><span class="text-slate-400">['+p.y+']</span><span class="text-accent">'+p.v+'</span></div>' +
-            '<h3 class="font-bold mt-2 text-base sm:text-lg leading-snug" style="color:#eef2ff">'+p.t+'</h3>' +
-            '<div class="flex flex-wrap items-center gap-2 mt-4">'+doi+'</div>' +
-            '<div class="mt-3 flex flex-wrap gap-1.5">'+tags+'</div></div>';
-    });
+  var list=document.getElementById('pubsList'); list.innerHTML='';
+  ITEMS.forEach(function(it, i){
+    var tag = it[1]==='RF Amplifier Design'
+      ? (lang==='ar'?'تصميم مضخمات راديوية':'RF Amplifier Design')
+      : (lang==='ar'?'أمن GNSS والطائرات من دون طيار':'GNSS Security · UAV');
+    list.innerHTML+='<div class="card p-6 rise">'+
+      '<div class="flex items-center justify-between gap-3">'+
+      '<span class="mono text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">Paper '+it[0]+'</span>'+
+      '<span class="mono text-[10px] bg-[var(--accent-soft)] text-[var(--accent)] rounded-full px-2.5 py-1 font-semibold">'+tag+'</span>'+
+      '</div>'+
+      '<h3 class="display font-medium text-lg leading-snug mt-3">'+it[2]+'</h3>'+
+      '<p class="mono text-[11px] text-[var(--muted)] mt-3 flex items-center gap-2"><i class="fa-solid fa-hourglass-half text-[var(--warm)]"></i>'+t.pending+'</p>'+
+      '</div>';
+  });
+  observe();
 }
 
 function exportBib(){
-    var a = document.createElement('a');
-    a.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(hardcodedBib());
-    a.download = 'abdo-ballouk-publications.bib';
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-}
-function hardcodedBib(){
-    return [
-      '@phdthesis{Ballouk2026,dissertation,', '  author  = {Ballouk, Abdo},', '  title   = {A Protocol for Signal Intervention in the Control of a UAV},', '  school  = {Damascus University},', '  year    = {2026}', '}',
-      '@inproceedings{Ballouk2024drones,', '  author  = {Ballouk, Abdo},', '  title   = {Study and Analysis of Methods Used to Detect and Deter Drones in the Range of Radio Waves},', '  booktitle = {International Conference on Aerospace Research},', '  address = {Yogyakarta, Indonesia},', '  year    = {2024}', '}',
-      '@article{Ballouk2023rf,', '  author  = {Ballouk, Abdo},', '  title   = {RF-Based UAV Detection Systems},', '  journal = {ARASET},', '  year    = {2023}', '}',
-      '@article{Ballouk2023jamming,', '  author  = {Ballouk, Abdo},', '  title   = {An Approach to Detect Drones Resistance to Jamming Methods},', '  journal = {ARASET},', '  year    = {2023}', '}',
-      '@article{Ballouk2022realtime,', '  author  = {Ballouk, Abdo},', '  title   = {Optimized Method for Real-Time Detection of Drones},', '  journal = {Tishreen University Journal},', '  year    = {2022}', '}',
-      '@article{Ballouk2022emo,', '  author  = {Ballouk, Abdo},', '  title   = {Hybrid Cross Neural Network for Speech Emotion Recognition},', '  journal = {International Journal of Interactive Mobile Technologies},', '  year    = {2022}', '}',
-      '@article{Ballouk2021gnss,', '  author  = {Ballouk, Abdo},', '  title   = {Hybrid Adaptive Jamming and Spoofing Suppression Method for Global Navigation Satellite Systems},', '  journal = {Alexandria Engineering Journal},', '  year    = {2021},', '  doi     = {10.1016/j.aej.2021.03.015}', '}'
-    ].join('\n');
+  var bib = ITEMS.map(function(it){
+    return '@article{ballouk'+it[0]+',\n  author = {Ballouk, Abdo},\n  title  = {'+it[2]+'},\n  year   = {}\n}';
+  }).join('\n\n');
+  var a=document.createElement('a');
+  a.href='data:text/plain;charset=utf-8,'+encodeURIComponent(bib+'%'.replace('%',''));
+  a.download='abdo-ballouk-publications.bib';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
 }
 
-var currentLang = 'en';
-document.getElementById('langToggleBtn').addEventListener('click', function(){ currentLang = currentLang === 'en' ? 'ar' : 'en'; buildPage(currentLang); });
-document.getElementById('exportBtn').addEventListener('click', exportBib);
+function observe(){
+  var io=new IntersectionObserver(function(entries){ entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } }); },{threshold:.12});
+  document.querySelectorAll('.rise').forEach(function(el){ io.observe(el); });
+}
+
+var currentLang='en';
+document.getElementById('langBtn').addEventListener('click',function(){ currentLang=currentLang==='en'?'ar':'en'; buildPage(currentLang); });
+document.getElementById('exportBtn').addEventListener('click',exportBib);
 buildPage('en');
 </script>
 </body>
