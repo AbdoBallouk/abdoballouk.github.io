@@ -10,6 +10,8 @@
 <meta property="og:description" content="Seven peer-reviewed publications in GNSS security, UAV communications and RF amplifier design.">
 <meta property="og:image" content="https://abdoballouk.github.io/spectrox/assets/main-picture-spectrum.png">
 <meta property="og:url" content="https://abdoballouk.github.io/publications.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ar_SY">
 <meta name="theme-color" content="#0C1222">
 <link rel="icon" href="assets/favicon.ico">
 <link rel="canonical" href="https://abdoballouk.github.io/publications.html">
@@ -181,7 +183,7 @@ function exportBib(){
     return '@article{ballouk'+it[0]+',\n  author = {Ballouk, Abdo},\n  title  = {'+it[2]+'},\n  year   = {}\n}';
   }).join('\n\n');
   var a=document.createElement('a');
-  a.href='data:text/plain;charset=utf-8,'+encodeURIComponent(bib+'%'.replace('%',''));
+  a.href='data:text/plain;charset=utf-8,'+encodeURIComponent(bib);
   a.download='abdo-ballouk-publications.bib';
   document.body.appendChild(a); a.click(); document.body.removeChild(a);
 }
