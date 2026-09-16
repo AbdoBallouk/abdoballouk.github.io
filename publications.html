@@ -120,13 +120,13 @@ var GS_URL='https://scholar.google.com/citations?user=R2FU5NsAAAAJ&hl=en';
 var RG_URL='https://www.researchgate.net/profile/Abdo-Ballouk';
 
 var ITEMS = [
- ["1","GNSS Security — UAVs","Novel Advanced Hybrid Jamming Techniques for GPS/GLONASS Receivers on UAVs Using a Locally Designed SDR Platform","https://www.researchgate.net/publication/388977434_Novel_Advanced_Hybrid_Jamming_Techniques_for_GPSGLONASS_Receivers_on_UAVs_Using_Locally_Designed_SDR_Platform"],
- ["2","GNSS Security — UAVs","An Efficient Hybrid Spoofing / Spot-Jamming Strategy on Unmanned Aerial Vehicles","https://www.researchgate.net/publication/382672683_An_Efficient_Hybrid_SpoofingSpot-jamming_Strategy_on_Unmanned_Aerial_Vehicles"],
- ["3","GNSS Security — UAVs","Development and Evaluation of Novel Hybrid Jamming Techniques on American and Russian GNSS Systems Onboard UAVs Using a Locally-Developed SDR Platform",""],
- ["4","UAV Communications","Estimating the Effectiveness of Tone Jamming Technique on the Control and Air Navigation Channels of UAVs",""],
- ["5","UAV Communications","Estimating the Effectiveness of Protocol-Aware Jamming Technique with a Navigation Message on Navigation Systems Onboard UAVs",""],
- ["6","RF Amplifier Design","Design of Narrow-Band Frequency Amplifier (1.5–1.6 GHz) Based on InGaP/GaAs HBT Technology","https://www.researchgate.net/publication/348943306_Design_narrow-band_frequency_amplifier_15GHz_-16GHz_based_on_InGaP_Heterojunction_Bipolar_Transistor_HBT_and_GaAs_HBT"],
- ["7","RF Amplifier Design","Design of Wideband RF Driver Amplifier (100–1800 MHz) Based on InGaP/GaAs HBT MMIC Technology",""]
+ ["1","GNSS Security — UAVs","Novel Advanced Hybrid Jamming Techniques for GPS/GLONASS Receivers on UAVs Using a Locally Designed SDR Platform","https://www.researchgate.net/publication/388977434_Novel_Advanced_Hybrid_Jamming_Techniques_for_GPSGLONASS_Receivers_on_UAVs_Using_Locally_Designed_SDR_Platform","Int. Journal of Sensors, Wireless Communications & Control — 16(2), 2026"],
+ ["2","GNSS Security — UAVs","An Efficient Hybrid Spoofing / Spot-Jamming Strategy on Unmanned Aerial Vehicles","https://www.researchgate.net/publication/382672683_An_Efficient_Hybrid_SpoofingSpot-jamming_Strategy_on_Unmanned_Aerial_Vehicles","Int. Journal of Sensors, Wireless Communications & Control — 15(2), 2025"],
+ ["3","GNSS Security — UAVs","Development and Evaluation of Novel Hybrid Jamming Techniques on American and Russian GNSS Systems Onboard UAVs Using a Locally-Developed SDR Platform","","PENDING"],
+ ["4","UAV Communications","Estimating the Effectiveness of Tone Jamming Technique on the Control and Air Navigation Channels of UAVs","","PENDING"],
+ ["5","UAV Communications","Estimating the Effectiveness of Protocol-Aware Jamming Technique with a Navigation Message on Navigation Systems Onboard UAVs","","PENDING"],
+ ["6","RF Amplifier Design","Design of Narrow-Band Frequency Amplifier (1.5–1.6 GHz) Based on InGaP/GaAs HBT Technology","https://www.researchgate.net/publication/348943306_Design_narrow-band_frequency_amplifier_15GHz_-16GHz_based_on_InGaP_Heterojunction_Bipolar_Transistor_HBT_and_GaAs_HBT","Journal of Engineering (University of Baghdad) — 27(2), 13–26, 2021"],
+ ["7","RF Amplifier Design","Design of Wideband RF Driver Amplifier (100–1800 MHz) Based on InGaP/GaAs HBT MMIC Technology","","Tishreen University Journal — Engineering Sciences Series, 43(10), 2021"]
 ];
 
 var translations = {
@@ -135,7 +135,7 @@ var translations = {
   pubBadge:"Peer-Reviewed Publications",
   pubSub:"Research on GNSS security, hybrid jamming & spoofing countermeasures for UAV systems, UAV air-navigation channel behaviour, and precision RF amplifier design. Titles are available on request from the publishing venues; DOIs and year-of-publication metadata are maintained as they become available.",
   listEyebrow:"Bibliography", listTitle:"Publication list",
-  gs:"Google Scholar", rg:"ResearchGate", pending:"DOI & venue — pending update", rgLink:"View on ResearchGate",
+  gs:"Google Scholar", rg:"ResearchGate", pendingVenue:"Venue & year — pending update", rgLink:"View on ResearchGate", rgProfile:"Find it on my ResearchGate",
   ftName:"Dr. Abdo Ballouk", ftNote:"All peer-reviewed academic work. © 2026.", backHome:"← Back to homepage"
  },
  ar:{
@@ -143,7 +143,7 @@ var translations = {
   pubBadge:"أبحاث محكّمة",
   pubSub:"أبحاث في أمن أنظمة الملاحة، وآليات الهجين لمكافحة التشويش والخداع لأنظمة الطائرات من دون طيار، وسلوك قنوات الملاحة الجوية للطائرات من دون طيار، وتصميم مضخمات راديوية دقيقة. عناوين الأبحاث متاحة عند الطلب من الجهات الناشرة؛ وتُحدَّث أرقام DOI وسنة النشر عند توفرها.",
   listEyebrow:"الببليوغرافيا", listTitle:"قائمة المنشورات",
-  gs:"Google Scholar", rg:"ResearchGate", pending:"DOI وجهة النشر — قيد التحديث", rgLink:"عرض على ResearchGate",
+  gs:"Google Scholar", rg:"ResearchGate", pendingVenue:"وجهة وسنة النشر — قيد التحديث", rgLink:"عرض على ResearchGate", rgProfile:"ابحث عنه في صفحاتي على ResearchGate",
   ftName:"د. عبده بللوق", ftNote:"جميع الأعمال الأكاديمية محكّمة. © 2026.", backHome:"→ العودة إلى الصفحة الرئيسية"
  }
 };
@@ -166,15 +166,19 @@ function buildPage(lang){
     var tag = it[1]==='RF Amplifier Design'
       ? (lang==='ar'?'تصميم مضخمات راديوية':'RF Amplifier Design')
       : (lang==='ar'?'أمن GNSS والطائرات من دون طيار':'GNSS Security · UAV');
+    var meta = it[4]==='PENDING'
+      ? '<p class="mono text-[11px] text-[var(--muted)] mt-3 flex items-center gap-2"><i class="fa-solid fa-hourglass-half text-[var(--warm)]"></i>'+t.pendingVenue+'</p>'
+      : '<p class="mono text-[11px] text-[var(--accent)] mt-3 ltr">'+it[4]+'</p>';
     var footer = it[3]
       ? '<a href="'+it[3]+'" target="_blank" class="inline-flex items-center gap-2 mt-4 text-[13px] font-semibold text-[var(--accent)] hover:underline"><i class="fa-brands fa-researchgate text-teal-500"></i>'+t.rgLink+'<i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>'
-      : '<p class="mono text-[11px] text-[var(--muted)] mt-4 flex items-center gap-2"><i class="fa-solid fa-hourglass-half text-[var(--warm)]"></i>'+t.pending+'</p>';
+      : '<a href="https://www.researchgate.net/profile/Abdo-Ballouk" target="_blank" class="inline-flex items-center gap-2 mt-4 text-[13px] font-semibold text-[var(--accent)] hover:underline"><i class="fa-brands fa-researchgate text-teal-500"></i>'+t.rgProfile+'<i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>';
     list.innerHTML+='<div class="card p-6 rise">'+
       '<div class="flex items-center justify-between gap-3">'+
       '<span class="mono text-[11px] uppercase tracking-[0.2em] text-[var(--muted)]">Paper '+it[0]+'</span>'+
       '<span class="mono text-[10px] bg-[var(--accent-soft)] text-[var(--accent)] rounded-full px-2.5 py-1 font-semibold">'+tag+'</span>'+
       '</div>'+
       '<h3 class="display font-medium text-lg leading-snug mt-3">'+it[2]+'</h3>'+
+      meta+
       footer+
       '</div>';
   });
@@ -183,7 +187,8 @@ function buildPage(lang){
 
 function exportBib(){
   var bib = ITEMS.map(function(it){
-    return '@article{ballouk'+it[0]+',\n  author = {Ballouk, Abdo},\n  title  = {'+it[2]+'},\n  year   = {}\n}';
+    var note = it[4]==='PENDING' ? 'venue pending' : it[4];
+    return '@article{ballouk'+it[0]+',\n  author = {Ballouk, Abdo},\n  title  = {'+it[2]+'},\n  note   = {'+note+'}\n}';
   }).join('\n\n');
   var a=document.createElement('a');
   a.href='data:text/plain;charset=utf-8,'+encodeURIComponent(bib);
