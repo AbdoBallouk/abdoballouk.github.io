@@ -315,6 +315,30 @@ body{ background:var(--bg); color:var(--ink); font-family:'Inter',-apple-system,
       <p class="text-sm text-[var(--muted)] mt-2" id="pDocDes">Desktop scanner — capture, auto-enhance, document editor, encrypted archive.</p>
       <span class="inline-block text-[10px] font-bold rounded-full px-2.5 py-1 bg-[var(--line)] text-[var(--muted)] mt-4">PRIVATE</span>
     </div>
+    <div class="card p-6 rise">
+      <div class="mono text-[10px] uppercase tracking-[0.2em] text-[var(--muted)] mb-4">07 · Web platform</div>
+      <h3 class="display font-bold text-xl">Family Stats Platform</h3>
+      <p class="text-sm text-[var(--muted)] mt-2" id="pFamDes">Bilingual household census web platform — secure data entry, bulk import, analytics dashboards (Flask).</p>
+      <span class="inline-block text-[10px] font-bold rounded-full px-2.5 py-1 bg-[var(--line)] text-[var(--muted)] mt-4">PRIVATE</span>
+    </div>
+    <div class="card p-6 rise">
+      <div class="mono text-[10px] uppercase tracking-[0.2em] text-[var(--muted)] mb-4">08 · Warehouse</div>
+      <h3 class="display font-bold text-xl">WMS Warehouse System</h3>
+      <p class="text-sm text-[var(--muted)] mt-2" id="pWmsDes">Inventory management — assets, roles, QR labels, Excel reports, auto-backups, remote access via tunnel (FastAPI).</p>
+      <span class="inline-block text-[10px] font-bold rounded-full px-2.5 py-1 bg-[var(--line)] text-[var(--muted)] mt-4">PRIVATE</span>
+    </div>
+    <div class="card p-6 rise">
+      <div class="mono text-[10px] uppercase tracking-[0.2em] text-[var(--muted)] mb-4">09 · SDR</div>
+      <h3 class="display font-bold text-xl">PlutoSDR Fast Hopping</h3>
+      <p class="text-sm text-[var(--muted)] mt-2" id="pHopDes">Ultra-fast frequency-hopping SDR transceiver controller with native C kernel and low-level GPIO/SPI probes.</p>
+      <span class="inline-block text-[10px] font-bold rounded-full px-2.5 py-1 bg-[var(--line)] text-[var(--muted)] mt-4">PRIVATE</span>
+    </div>
+    <div class="card p-6 rise">
+      <div class="mono text-[10px] uppercase tracking-[0.2em] text-[var(--muted)] mb-4">10 · Firmware</div>
+      <h3 class="display font-bold text-xl">PlutoSDR Fix Tools</h3>
+      <p class="text-sm text-[var(--muted)] mt-2" id="pFixDes">Firmware repair and flashing toolkit for recovering bricked ADALM-Pluto devices.</p>
+      <span class="inline-block text-[10px] font-bold rounded-full px-2.5 py-1 bg-[var(--line)] text-[var(--muted)] mt-4">PRIVATE</span>
+    </div>
   </div>
 </section>
 
@@ -421,8 +445,8 @@ var PUBS_AR = [
  ["تطوير وتقييم تقنيات تشويش هجينة على أنظمة GNSS الأمريكية والروسية على متن الطائرات من دون طيار","[RF]"],
  ["تقدير فعالية تقنية التشويش النغمي على قنوات التحكم والملاحة الجوية للطائرات من دون طيار","[RF]"],
  ["تقدير فعالية التشويش الواعي بالبروتوكول مع رسالة ملاحية على أنظمة الملاحة على متن الطائرات من دون طيار","[RF]"],
- ["تصميم مضخم ترددي ضيق النطاق (1.5–1.6 جيجاهرتز) بتقنية InGaP/GaAs HBT","[RF]"],
- ["تصميم مضخم راديوي عريض النطاق (100–1800 ميجاهرتز) بتقنية InGaP/GaAs HBT MMIC","[RF]"]
+["تصميم مضخم ضيق المجال الترددي (1.5–1.6 جيجاهرتز) بتقنية InGaP/GaAs HBT","[RF]"],
+  ["تصميم مضخم راديوي عريض المجال الترددي (100–1800 ميجاهرتز) بتقنية InGaP/GaAs HBT MMIC","[RF]"]
 ];
 var EDU = {
  en:[
@@ -499,6 +523,10 @@ var translations = {
   pGoldDes:"Real-time gold price tracker for Android — rates, alerts, dealers, portfolio.",
   pSmartDes:"Enterprise licensing & anti-tamper suite binding software to hardware.",
   pDocDes:"Desktop scanner — capture, auto-enhance, document editor, encrypted archive.",
+  pFamDes:"Bilingual household census web platform — secure data entry, bulk import, analytics dashboards (Flask).",
+  pWmsDes:"Inventory management — assets, roles, QR labels, Excel reports, auto-backups, remote access via tunnel (FastAPI).",
+  pHopDes:"Ultra-fast frequency-hopping SDR transceiver controller with native C kernel and low-level GPIO/SPI probes.",
+  pFixDes:"Firmware repair and flashing toolkit for recovering bricked ADALM-Pluto devices.",
   eduEyebrow:"Academic record", eduTitle:"Education",
   certEyebrow:"Credentials", certTitle:"Certifications & training",
   expEyebrow:"Career", expTitle:"Experience",
@@ -510,11 +538,11 @@ var translations = {
   navName:"د. عبده بللوق", navTag:"هندسة راديوية · SDR · الطيف", navAbout:"نبذة", navFocus:"التخصصات", navPubs:"المنشورات", navProjects:"الأنظمة", navEdu:"التعليم",
   printBtn:"طباعة", ctaTop:"تواصل",
   heroEyebrow:"بحوث RF وSDR — دمشق، سوريا", heroName:"عبده بللوق", heroRole:"باحث · محاضر · مطوّر برمجيات",
-  heroDesc:"باحث في تحليل الإشارات الراديوية (RF) والراديو المعرّف برمجياً (SDR)، محاضر جامعي ومطوّر برمجيات، بخبرة تزيد على 15 عاماً في البحث والتطوير — إدارة الطيف الترددي، موثوقية الإشارة، اتصالات الطائرات من دون طيار وأمن أنظمة الملاحة. مؤلف لسبع أبحاث محكّمة وباني لأكثر من 10 أنظمة تشغيلية.",
+  heroDesc:"باحث في تحليل الإشارات الراديوية (RF) والراديو المعرّف برمجياً (SDR)، محاضر جامعي ومطوّر برمجيات، بخبرة تزيد على 15 عاماً في البحث والتطوير — إدارة الطيف، موثوقية الإشارة، اتصالات الطائرات من دون طيار وأمن أنظمة الملاحة. مؤلف لسبع أبحاث محكّمة ومطوّر لأكثر من 10 أنظمة برمجية قيد التشغيل.",
   btnWork:"استكشف الأنظمة", btnPubs:"المنشورات",
-  plotLabel:"مراقب الإشارة / الطيف", plotLive:"RF مباشر", freqLow:"DC", freqMid:"1 ميجاهرتز – 7.25 جيجاهرتز", freqHigh:"RF",
+  plotLabel:"مراقبة الطيف وتحليل الإشارة", plotLive:"RF مباشر", freqLow:"DC", freqMid:"1 ميجاهرتز – 7.25 جيجاهرتز", freqHigh:"RF",
   s1:"سنوات بحث وتدريس", s2:"أبحاث محكّمة", s3:"أنظمة منشورة", s4:"دكتوراه بمرتبة الشرف",
-  aboutEyebrow:"نبذة", aboutTitle:"هندسة ممتدة\nبين العتاد وموجات الهواء.",
+  aboutEyebrow:"نبذة", aboutTitle:"الهندسة الراديوية\nوعرض المجال الترددي.",
   aboutMeta:"دمشق — سوريا · حضوري، ثنائي اللغة EN/AR",
   aboutP1:"أكثر من 15 سنة خبرة في البحث والتطوير والتدريس الجامعي في مجال تحليل الإشارات الراديوية (RF) وإدارة الطيف الترددي. أصمم حلول موثوقية الإشارة للاتصالات في ظروف راديوية معقدة باستخدام منصات الراديو المعرّف برمجياً (SDR)، وأطوّر أطراً تجريبية لتقييم سلوك الإشارات في أنظمة الطائرات من دون طيار (UAV) وأنظمة الملاحة عبر الأقمار الصناعية (GNSS)، وأبحث في تحسين مرونة البنى التحتية اللاسلكية وأنظمة الملاحة الجوية.",
   aboutP2:"القيادة البحثية: تأليف أبحاث علمية محكّمة حول موثوقية الإشارات في بيئات واقعية معقدة مع تطبيقات عملية للبنية التحتية المدنية، وقيادة فرق عمل متعددة التخصصات في مشاريع اتصالات تجريبية، مع خبرة عملية في الأنظمة الراديوية عالية الاستطاعة والتصميم المدمج. الإنجاز الهندسي: قيادة أكثر من 8 مشاريع كاملة — من تصميم الدارات الإلكترونية وتصنيع الدارات المطبوعة إلى مرحلة الاستطاعة العالية الراديوية وصولاً إلى البرمجيات والمعايرة والاختبارات الميدانية.",
@@ -527,10 +555,14 @@ var translations = {
   projSub:"مستودعات الشيفرة الأساسية خاصة حفاظاً على الملكية الفكرية. استكشف البوروشورات التفاعلية أو تواصل معي للعروض التجريبية والتعاون.",
   pSpecDes:"محطة تحليل طيف احترافية — مراقبة الإشارة وتقييم القنوات مع عرض تفاعلي مباشر.",
   pAstDes:"محلّل طيف بتقنية بايثون (1 ميجاهرتز – 7.25 جيجاهرتز) — HackRF / PlutoSDR.",
-  pDroneDes:"كشف سلبي للطائرات من دون طيار في نطاقين مع واجهة بأسلوب الرادار ودرجات ثقة إحصائية.",
+  pDroneDes:"كشف سلبي للطائرات من دون طيار عبر مجالين تردديين مع واجهة بأسلوب الرادار ودرجات ثقة إحصائية.",
   pGoldDes:"متتبع أسعار الذهب اللحظي لأندرويد — أسعار وتنبيهات وموزعون ومحفظة.",
   pSmartDes:"حزمة ترخيص وحماية للمؤسسات تربط البرنامج بالعتاد.",
   pDocDes:"ماسح مكتبي — التقاط وتحسين تلقائي ومحرر مستندات وأرشيف مشفر.",
+  pFamDes:"منصة ويب ثنائية اللغة لتعداد الأسر — إدخال آمن للبيانات، استيراد جماعي، ولوحات تحليل إحصائية (Flask).",
+  pWmsDes:"إدارة المخزون والمستودعات — الأصول والصلاحيات وبطاقات QR وتقارير Excel ونسخ احتياطي تلقائي والوصول عن بُعد عبر النفق (FastAPI).",
+  pHopDes:"متحكم إرسال واستقبال SDR سريع للقفز الترددي مع نواة C أصلية وتفقد مباشر لـGPIO/SPI.",
+  pFixDes:"مجموعة أدوات لإصلاح البرنامج الثابت (Firmware) واسترجاع أجهزة ADALM-Pluto المتعطلة.",
   eduEyebrow:"السجل الأكاديمي", eduTitle:"التعليم",
   certEyebrow:"الاعتمادات", certTitle:"الشهادات والتدريب",
   expEyebrow:"المسيرة", expTitle:"الخبرات",
