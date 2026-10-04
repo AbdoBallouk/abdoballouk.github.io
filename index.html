@@ -340,6 +340,21 @@ body{ background:var(--bg); color:var(--ink); font-family:'Inter',-apple-system,
       <p class="text-sm text-[var(--muted)] mt-2" id="pFixDes">Firmware repair and flashing toolkit for recovering bricked ADALM-Pluto devices.</p>
       <span class="inline-block text-[10px] font-bold rounded-full px-2.5 py-1 bg-[var(--line)] text-[var(--muted)] mt-4">PRIVATE</span>
     </div>
+    <div class="card p-6 md:col-span-2 lg:row-span-1 rise" style="background:linear-gradient(135deg,#0C1222, #17223B); border-color:#2E5BFF33;">
+      <div class="flex items-center justify-between mb-4">
+        <span class="mono text-[10px] uppercase tracking-[0.2em] text-white/50">11 · PhD research</span>
+        <span class="flex items-center gap-1.5 text-[10px] font-bold text-emerald-300 bg-emerald-500/15 rounded-full px-2.5 py-1 border border-emerald-500/25"><i class="fa-solid fa-shield-halved text-[8px]"></i><span>ENCRYPTED · OTA-TESTED</span></span>
+      </div>
+      <h3 class="display font-bold text-xl text-white">SecureComm — Encrypted PlutoSDR Link</h3>
+      <p class="text-sm text-white/65 mt-2 max-w-xl" id="pSecureDes">Ph.D. project: secure multi-user radio link over PlutoSDR (host-based). Fixed device numbers with selective calling, E2E crypto (X25519 + XChaCha20-Poly1305 + Ed25519), keyed frequency hopping and encrypted voice calls. Verified wirelessly over two real AD9364 boards.</p>
+      <div class="flex flex-wrap gap-2 mt-4">
+        <span class="mono text-[10px] bg-white/10 text-white/70 rounded-full px-2.5 py-1">X25519</span>
+        <span class="mono text-[10px] bg-white/10 text-white/70 rounded-full px-2.5 py-1">XChaCha20-Poly1305</span>
+        <span class="mono text-[10px] bg-white/10 text-white/70 rounded-full px-2.5 py-1">Ed25519</span>
+        <span class="mono text-[10px] bg-white/10 text-white/70 rounded-full px-2.5 py-1">FHSS</span>
+        <span class="mono text-[10px] bg-white/10 text-white/70 rounded-full px-2.5 py-1">AD9364</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -529,6 +544,7 @@ var translations = {
   pWmsDes:"Inventory management — assets, roles, QR labels, Excel reports, auto-backups, remote access via tunnel (FastAPI).",
   pHopDes:"Ultra-fast frequency-hopping SDR transceiver controller with native C kernel and low-level GPIO/SPI probes.",
   pFixDes:"Firmware repair and flashing toolkit for recovering bricked ADALM-Pluto devices.",
+  pSecureDes:"Ph.D. project: secure multi-user radio link over PlutoSDR (host-based). Fixed device numbers with selective calling, E2E crypto (X25519 + XChaCha20-Poly1305 + Ed25519), keyed frequency hopping and encrypted voice calls. Verified wirelessly over two real AD9364 boards.",
   eduEyebrow:"Academic record", eduTitle:"Education",
   certEyebrow:"Credentials", certTitle:"Certifications & training",
   expEyebrow:"Career", expTitle:"Experience",
@@ -565,6 +581,7 @@ var translations = {
   pWmsDes:"إدارة المخزون والمستودعات — الأصول والصلاحيات وبطاقات QR وتقارير Excel ونسخ احتياطي تلقائي والوصول عن بُعد عبر النفق (FastAPI).",
   pHopDes:"متحكم إرسال واستقبال SDR سريع للقفز الترددي مع نواة C أصلية وتفقد مباشر لـGPIO/SPI.",
   pFixDes:"مجموعة أدوات لإصلاح البرنامج الثابت (Firmware) واسترجاع أجهزة ADALM-Pluto المتعطلة.",
+  pSecureDes:"مشروع دكتوراه: نظام اتصال راديوي آمن متعدد المستخدمين فوق PlutoSDR (معالجة على الحاسب). أرقام أجهزة ثابتة مع نداء انتقائي، وتشفير من الطرف إلى الطرف (X25519 + XChaCha20-Poly1305 + Ed25519)، وقفز ترددي مُفتاحي، ومكالمات صوتية مشفرة. تحقّق لاسلكياً فعلياً على بطاقتين AD9364 حقيقيتين.",
   eduEyebrow:"السجل الأكاديمي", eduTitle:"التعليم",
   certEyebrow:"الاعتمادات", certTitle:"الشهادات والتدريب",
   expEyebrow:"المسيرة", expTitle:"الخبرات",
